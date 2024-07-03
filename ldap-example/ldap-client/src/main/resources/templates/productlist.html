@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Oauth2.0 WebShop: Product list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/resources/main.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Oauth 2.0 Example WebShop</h1>
+    <h2>Available Products</h2>
+    <div th:if="${#lists.isEmpty(products)}">
+        <p>Sorry, there are currently no products available...</p>
+    </div>
+    <div th:if="${not#lists.isEmpty(products)}">
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Description</h1></th>
+                    <th><h1>Price</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.description}"></td>
+                    <td>
+                        <span th:text="${#numbers.formatDecimal(product.price, 1, 'DEFAULT', 2, 'DEFAULT')}"></span> 
+                        <span th:text="${product.currency}"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
