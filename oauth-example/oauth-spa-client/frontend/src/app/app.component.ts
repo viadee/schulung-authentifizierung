@@ -1,13 +1,32 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { OidcSecurityService } from 'angular-auth-oidc-client';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'Oauth 2.0 Example WebShop SPA';
+
+  isAuthenticated=false;
+
+  constructor(private oidcSecurityService: OidcSecurityService) {}
+
+  ngOnInit() {
+    this.oidcSecurityService.checkAuth().subscribe(({ isAuthenticated, userData}) => {
+      this.isAuthenticated = isAuthenticated;
+    });
+  }
+
+  logout() {
+    this.oidcSecurityService.logoff().subscribe((result) => console.log(result));
+  }
+
 }
