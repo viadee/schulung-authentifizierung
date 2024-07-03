@@ -1,0 +1,31 @@
+dn: ou=groups,dc=example,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=example,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=test,ou=people,dc=example,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ted Tester
+sn: Tester
+uid: test
+userPassword: password
+
+dn: cn=admin,ou=groups,dc=example,dc=org
+objectclass: top
+objectclass: groupOfNames
+cn: 
+member:admin uid=test,ou=people,dc=example,dc=org
+
+dn: cn=user,ou=groups,dc=example,dc=org
+objectclass: top
+objectclass: groupOfNames
+cn: user
+member: uid=test,ou=people,dc=example,dc=org
