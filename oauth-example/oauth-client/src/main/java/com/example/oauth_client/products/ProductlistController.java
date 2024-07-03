@@ -26,7 +26,7 @@ public class ProductlistController {
     }
 
     private List<Product> getProducts() {
-        Mono<Product[]> response = webClient.get().uri("http://localhost:8081/api/products")
+        Mono<Product[]> response = webClient.get().uri("http://localhost:8090/api/products")
                 .retrieve().bodyToMono(Product[].class);
         Product[] products = response.block();
         return Arrays.asList(products);
