@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: oauth-resource-server
+
+server:
+    port: 8090
+    servlet:
+      contextPath: /api
