@@ -7,12 +7,14 @@ import org.springframework.ldap.core.support.BaseLdapPathContextSource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.ldap.LdapBindAuthenticationManagerFactory;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 import org.springframework.security.ldap.userdetails.PersonContextMapper;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
+@EnableWebSecurity
 public class WebSecurityConfig {
 
   @Bean
