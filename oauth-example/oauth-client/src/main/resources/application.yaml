@@ -1,7 +1,24 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: trace
+
 spring:
   application:
     name: oauth-client
-
-server:
-  port: 8080
-  
+  #security:
+  #  oauth2:
+  #    client:
+  #      registration:
+  #        articles-client-authorization-code:
+  #          provider: spring
+  #          client-id: oauth-client
+  #          client-secret: secret
+  #          authorization-grant-type: authorization_code
+  #          scope: openid,products:read
+  #          client-name: articles-client-authorization-code
+  #      provider:
+  #        spring:
+  #          issuer-uri: http://127.0.0.1:9000

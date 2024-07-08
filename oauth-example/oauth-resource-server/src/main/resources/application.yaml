@@ -1,8 +1,13 @@
-spring:
-  application:
-    name: oauth-resource-server
-
 server:
     port: 8090
     servlet:
       contextPath: /api
+
+spring:
+  application:
+    name: oauth-resource-server
+  #security:
+  #  oauth2:
+  #    resourceserver:
+  #      jwt:
+  #        issuer-uri: http://127.0.0.1:9000
