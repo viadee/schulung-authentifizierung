@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 //import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 //import { OidcSecurityService } from 'angular-auth-oidc-client';
@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Oauth 2.0 Example WebShop SPA';
+  title = 'OAuth 2.0 Example WebShop SPA';
 
   //isAuthenticated=false;
   //
