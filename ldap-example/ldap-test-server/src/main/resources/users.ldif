@@ -21,8 +21,8 @@ userPassword: password
 dn: cn=admin,ou=groups,dc=example,dc=org
 objectclass: top
 objectclass: groupOfNames
-cn: 
-member:admin uid=test,ou=people,dc=example,dc=org
+cn: admin
+member: uid=test,ou=people,dc=example,dc=org
 
 dn: cn=user,ou=groups,dc=example,dc=org
 objectclass: top

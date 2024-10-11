@@ -2,8 +2,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 1.42em;
-    color: #A7A1AE;
-    background-color: #1F2739;
+    color: #212529;
+    background-color: #eeeeee;
 }
 
 h1 {
@@ -69,12 +69,12 @@ h2 a {
 
 /* Background-color of the odd rows */
 .container tr:nth-child(odd) {
-    background-color: #323C50;
+    background-color: #717171;
 }
 
 /* Background-color of the even rows */
 .container tr:nth-child(even) {
-    background-color: #2C3446;
+    background-color: #d5d5d5;
 }
 
 .container th {

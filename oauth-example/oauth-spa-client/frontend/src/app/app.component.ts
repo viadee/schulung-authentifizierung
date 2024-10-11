@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
 
@@ -11,9 +10,9 @@ import { OidcSecurityService } from 'angular-auth-oidc-client';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  title = 'Oauth 2.0 Example WebShop SPA';
+  title = 'OAuth 2.0 Example WebShop SPA';
 
   isAuthenticated=false;
 
