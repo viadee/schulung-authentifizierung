@@ -6,7 +6,7 @@ export const authConfig: PassedInitialConfig = {
             redirectUrl: window.location.origin,
             postLogoutRedirectUri: window.location.origin,
             clientId: 'public-oauth-client',
-            scope: 'openid profile products:read',
+            scope: 'openid products:read',
             responseType: 'code',
             silentRenew: false,
             renewTimeBeforeTokenExpiresInSeconds: 10,
