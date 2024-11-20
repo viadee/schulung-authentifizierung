@@ -53,6 +53,5 @@ spring:
                 - "http://localhost:4200"
               scopes:
                 - "openid"
-                - "profile"
                 - "products:read"
             require-proof-key: true
