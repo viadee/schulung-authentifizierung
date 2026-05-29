@@ -4,11 +4,10 @@ import { ProductService } from '../product.service';
 import { Product } from '../product';
 
 @Component({
-  selector: 'app-product-list',
-  standalone: true,
-  imports: [MatTableModule],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+    selector: 'app-product-list',
+    imports: [MatTableModule],
+    templateUrl: './product-list.component.html',
+    styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
   displayedColumns: string[] = ['name', 'description', 'price'];
