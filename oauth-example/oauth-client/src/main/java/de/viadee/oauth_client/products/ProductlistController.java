@@ -1,6 +1,6 @@
 package de.viadee.oauth_client.products;
 
-//import static org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction.clientRegistrationId;
+// import static org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction.clientRegistrationId;
 
 import java.util.Arrays;
 import java.util.List;

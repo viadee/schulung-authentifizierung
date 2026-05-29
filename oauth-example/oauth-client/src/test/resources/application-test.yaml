@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          articles-client-authorization-code:
+            provider: test-provider
+            client-id: test-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid,products:read            
+            client-name: articles-client-authorization-code
+        provider:
+          test-provider:
+            authorization-uri: "http://127.0.0.1:9999/mock/authorize"
+            token-uri: "http://127.0.0.1:9999/mock/token"
+            jwk-set-uri: "http://127.0.0.1:9999/mock/jwks"
+            user-info-uri: "http://127.0.0.1:9999/mock/userinfo"
