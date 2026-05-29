@@ -16,7 +16,7 @@ public class Product {
     private String currency;
 
     public Product(UUID id, String name, String description, BigDecimal price, String currency) {
-        this.id=id;
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -62,5 +62,5 @@ public class Product {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
-   
+
 }

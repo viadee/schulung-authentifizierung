@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class OauthSpaClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OauthSpaClientApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OauthSpaClientApplication.class, args);
+    }
 
 }

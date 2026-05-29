@@ -1,6 +1,6 @@
 package de.viadee.oauth_client.products;
 
-//import static org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction.clientRegistrationId;
+import static org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction.clientRegistrationId;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,8 +29,8 @@ public class ProductlistController {
 
     private List<Product> getProducts() {
         Mono<Product[]> response = webClient.get().uri("http://localhost:8090/api/products")
-                //.attributes(clientRegistrationId("articles-client-authorization-code"))
-                .retrieve().bodyToMono(Product[].class);
+                .attributes(clientRegistrationId("articles-client-authorization-code")).retrieve()
+                .bodyToMono(Product[].class);
         Product[] products = response.block();
         return Arrays.asList(products);
     }

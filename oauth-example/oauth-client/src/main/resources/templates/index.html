@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="de">
+<!DOCTYPE HTML>
+
+<head>
+    <title>OAuth 2.0 Example WebShop: Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.png">
+    <link href="/resources/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>OAuth 2.0 Example WebShop</h1>
+
+    <header class="hero-section">
+        <h1>Herzlich willkommen bei Example WebShop!</h1>
+        <p>Entdecke die neuesten Trends, exklusive Angebote und deine neuen Lieblingsstücke – bequem online geshoppt und
+            schnell geliefert.</p>
+        <a th:href="@{/productlist}" class="cta-button">Jetzt stöbern</a>
+    </header>
+
+    <!-- Demo-Hinweis (Wichtig für Testumgebungen) -->
+    <div class="demo-note">
+        <strong>Hinweis:</strong> Dies ist ein <strong>Demo-Webshop</strong>. Alle gezeigten Produkte, Preise und
+        Prozesse dienen ausschließlich zu Test- und Präsentationszwecken. Es werden keine echten Bestellungen ausgeführt
+        oder Zahlungen abgewickelt.
+    </div>
+
+    <!-- Warum bei uns shoppen? (Vorteile) -->
+    <main class="features">
+        <div class="feature-card">
+            <h3>✨ Top Qualität</h3>
+            <p>Wir wählen jedes Produkt in unserem Sortiment mit größter Sorgfalt aus, um dir nur das Beste zu bieten.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h3>🚀 Schneller Versand</h3>
+            <p>Heute bestellt, morgen auf dem Weg. Wir sorgen dafür, dass deine Bestellung blitzschnell bei dir ankommt.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h3>🔒 Sicherer Einkauf</h3>
+            <p>Deine Daten und Zahlungen sind bei uns durch modernste Verschlüsselungstechnologien geschützt.</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
